@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		22506D8E1CAA0C9900388E10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22506D8D1CAA0C9900388E10 /* AppDelegate.swift */; };
-		22506D901CAA0C9900388E10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22506D8F1CAA0C9900388E10 /* ViewController.swift */; };
+		22506D901CAA0C9900388E10 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22506D8F1CAA0C9900388E10 /* PostsViewController.swift */; };
 		22506D931CAA0C9900388E10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22506D911CAA0C9900388E10 /* Main.storyboard */; };
 		22506D951CAA0C9900388E10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22506D941CAA0C9900388E10 /* Assets.xcassets */; };
 		22506D981CAA0C9900388E10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22506D961CAA0C9900388E10 /* LaunchScreen.storyboard */; };
+		22506DA21CAA0D4400388E10 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22506DA11CAA0D4400388E10 /* Model.swift */; };
+		22506DA41CAA125200388E10 /* RedditClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22506DA31CAA125200388E10 /* RedditClient.swift */; };
+		22506DA91CAA1CD200388E10 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22506DA71CAA1CD200388E10 /* PostTableViewCell.swift */; };
+		22506DAA1CAA1CD200388E10 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22506DA81CAA1CD200388E10 /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22506D8A1CAA0C9900388E10 /* uva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uva.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22506D8D1CAA0C9900388E10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22506D8F1CAA0C9900388E10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22506D8F1CAA0C9900388E10 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		22506D921CAA0C9900388E10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22506D941CAA0C9900388E10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22506D971CAA0C9900388E10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22506D991CAA0C9900388E10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22506DA11CAA0D4400388E10 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		22506DA31CAA125200388E10 /* RedditClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditClient.swift; sourceTree = "<group>"; };
+		22506DA71CAA1CD200388E10 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		22506DA81CAA1CD200388E10 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		22506D8C1CAA0C9900388E10 /* uva */ = {
 			isa = PBXGroup;
 			children = (
+				22506DB21CAA229700388E10 /* RedditClient */,
+				22506DB11CAA229200388E10 /* Model */,
+				22506DB01CAA228A00388E10 /* Controllers */,
+				22506DAF1CAA227900388E10 /* Cells */,
 				22506D8D1CAA0C9900388E10 /* AppDelegate.swift */,
-				22506D8F1CAA0C9900388E10 /* ViewController.swift */,
 				22506D911CAA0C9900388E10 /* Main.storyboard */,
 				22506D941CAA0C9900388E10 /* Assets.xcassets */,
 				22506D961CAA0C9900388E10 /* LaunchScreen.storyboard */,
 				22506D991CAA0C9900388E10 /* Info.plist */,
 			);
 			path = uva;
+			sourceTree = "<group>";
+		};
+		22506DAF1CAA227900388E10 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				22506DA71CAA1CD200388E10 /* PostTableViewCell.swift */,
+				22506DA81CAA1CD200388E10 /* PostTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		22506DB01CAA228A00388E10 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22506D8F1CAA0C9900388E10 /* PostsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		22506DB11CAA229200388E10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22506DA11CAA0D4400388E10 /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		22506DB21CAA229700388E10 /* RedditClient */ = {
+			isa = PBXGroup;
+			children = (
+				22506DA31CAA125200388E10 /* RedditClient.swift */,
+			);
+			name = RedditClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +169,7 @@
 				22506D981CAA0C9900388E10 /* LaunchScreen.storyboard in Resources */,
 				22506D951CAA0C9900388E10 /* Assets.xcassets in Resources */,
 				22506D931CAA0C9900388E10 /* Main.storyboard in Resources */,
+				22506DAA1CAA1CD200388E10 /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22506D901CAA0C9900388E10 /* ViewController.swift in Sources */,
+				22506DA41CAA125200388E10 /* RedditClient.swift in Sources */,
+				22506DA21CAA0D4400388E10 /* Model.swift in Sources */,
+				22506D901CAA0C9900388E10 /* PostsViewController.swift in Sources */,
 				22506D8E1CAA0C9900388E10 /* AppDelegate.swift in Sources */,
+				22506DA91CAA1CD200388E10 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
